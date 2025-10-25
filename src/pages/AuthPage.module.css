@@ -1,0 +1,94 @@
+/* src/pages/AuthPage.module.css */
+
+.authContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    /* Use a height slightly less than 100vh because the Header is present */
+    min-height: 85vh; 
+}
+
+.authBox {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    /* Soft shadow for depth */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1), 0 5px 10px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 400px;
+}
+
+.authTitle {
+    text-align: center;
+    color: #1f2937;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.formGroup {
+    margin-bottom: 20px;
+}
+
+.formGroup label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #4b5563;
+    margin-bottom: 5px;
+}
+
+.formInput {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+}
+
+.formInput:focus {
+    border-color: #0070f3; /* Using your primary color for focus */
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 112, 243, 0.2);
+}
+
+.errorText {
+    color: #ef4444; 
+    font-size: 0.8rem;
+    margin-top: 5px;
+}
+
+.submitButton {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #0070f3;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.submitButton:hover {
+    background-color: #005bb5;
+}
+
+.switchLink {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #6b7280;
+}
+
+.switchLink a {
+    color: #0070f3;
+    text-decoration: none;
+}
+
+.switchLink a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,10 @@
+/* src/components/Layout.css */
+
+/* CRITICAL RULE: Enforce 1440px max-width on all main content */
+.main-content {
+    max-width: 1440px;
+    margin: 0 auto;
+    /* Add horizontal padding to prevent content from touching screen edges */
+    padding: 0 20px; 
+    min-height: 80vh; /* Ensures pages have visual height */
+}

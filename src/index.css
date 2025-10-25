@@ -1,0 +1,22 @@
+/* Reset basic browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Center the app nicely */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9fafb;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Make sure the root content is visible */
+#root {
+  text-align: center;
+}

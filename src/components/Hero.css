@@ -1,0 +1,138 @@
+/* ================================================= */
+/* HERO.CSS - Enforces Max-Width and Visual Rules */
+/* ================================================= */
+
+/* --- 1. Hero Container (.hero) --- */
+.hero {
+  /* CRUCIAL RULE: Max-Width and Centering */
+  max-width: 1440px; 
+  margin: 0 auto; 
+  
+  /* Positioning and Spacing */
+  position: relative;
+  padding: 80px 20px 180px 20px; 
+  min-height: 450px; 
+  
+  /* Mobile Default (Stacked/Centered) */
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+  
+  /* Prevents decorative elements from causing horizontal scroll */
+  overflow: hidden; 
+}
+
+/* --- 2. Decorative Elements --- */
+
+/* Hero Circle (Rule: Must overlap and be decorative) */
+.hero-circle {
+  position: absolute;
+  top: 15%; 
+  right: 10%;
+  width: 250px;
+  height: 250px;
+  background-color: #0070f3; /* Primary Blue Color */
+  border-radius: 50%;
+  opacity: 0.2;
+  filter: blur(15px); /* Soft, decorative appearance */
+  z-index: 1; /* Behind text */
+}
+
+/* Hero Wave (Wavy SVG Background) */
+.hero-wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px; 
+  z-index: 0; 
+}
+
+/* --- 3. Hero Content and Text --- */
+
+.hero-content {
+  text-align: center; 
+  max-width: 600px;
+  z-index: 5; /* Above all decorative elements */
+  margin-bottom: 2rem;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 800; 
+  margin-bottom: 1rem;
+  color: #1a202c; 
+}
+
+.hero-subtitle {
+  font-size: 1.35rem;
+  margin-bottom: 2.5rem;
+  color: #4a5568; 
+}
+
+/* --- 4. Buttons --- */
+
+.hero-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.btn-primary, .btn-secondary {
+  padding: 0.9rem 2rem;
+  border-radius: 10px; 
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-primary {
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  box-shadow: 0 4px 10px rgba(0, 112, 243, 0.3);
+}
+
+.btn-primary:hover {
+  background-color: #005bb5;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #0070f3;
+  border: 2px solid #0070f3;
+}
+
+.btn-secondary:hover {
+  background-color: #0070f3;
+  color: white;
+}
+
+/* --- 5. Responsive Adaptations (Desktop Layout) --- */
+
+@media (min-width: 992px) {
+  .hero {
+    /* Switch to side-by-side layout on larger screens */
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 100px;
+    padding-bottom: 180px;
+  }
+
+  .hero-content {
+    text-align: left; /* Align text left on desktop */
+    margin-right: 40px; 
+  }
+
+  .hero-buttons {
+    justify-content: flex-start; /* Align buttons left on desktop */
+  }
+
+  .hero-circle {
+    top: 5%;
+    right: 25%;
+  }
+}

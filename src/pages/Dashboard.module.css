@@ -1,0 +1,54 @@
+/* src/pages/Dashboard.module.css */
+
+.dashboardContainer {
+    padding: 30px 20px;
+}
+
+.dashboardTitle {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1a202c;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.statsGrid {
+    display: grid;
+    /* Responsive grid: 2 columns on small screens, 4 on desktop */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.statCard {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-top: 5px solid; /* Uses borderTopColor passed in JSX */
+    transition: transform 0.2s;
+}
+
+.statCard:hover {
+    transform: translateY(-5px);
+}
+
+.statLabel {
+    font-size: 0.9rem;
+    color: #4a5568;
+    margin-bottom: 5px;
+}
+
+.statCount {
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+.actionSection {
+    padding: 30px;
+    background-color: #f7fafc;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid #e2e8f0;
+}

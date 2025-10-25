@@ -1,0 +1,212 @@
+/* --- Global Containers and Layout --- */
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    font-family: 'Inter', sans-serif;
+}
+
+.title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #1a202c;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* --- Controls (Filters and Create Button) --- */
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.filterButtons {
+    display: flex;
+    gap: 10px;
+}
+
+.filterButton {
+    padding: 8px 16px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    background-color: #f7fafc;
+    color: #4a5568;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.filterButton:hover {
+    background-color: #e2e8f0;
+}
+
+.filterButton.active {
+    background-color: #4c51bf; /* Indigo */
+    color: white;
+    border-color: #4c51bf;
+    box-shadow: 0 2px 5px rgba(76, 81, 191, 0.3);
+}
+
+.createButton {
+    padding: 10px 20px;
+    background-color: #48bb78; /* Green */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.createButton:hover {
+    background-color: #38a169;
+    box-shadow: 0 4px 8px rgba(72, 187, 120, 0.4);
+}
+
+/* --- Table Styling --- */
+.tableContainer {
+    overflow-x: auto; /* Ensures horizontal scroll on small devices */
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.ticketTable {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.ticketTable th, .ticketTable td {
+    padding: 15px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.ticketTable th {
+    background-color: #edf2f7;
+    color: #2d3748;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.ticketRow {
+    transition: background-color 0.2s ease;
+}
+
+.ticketRow:hover {
+    background-color: #f7fafc;
+}
+
+/* Apply rounded corners to table edges */
+.ticketTable tr:first-child th:first-child { border-top-left-radius: 12px; }
+.ticketTable tr:first-child th:last-child { border-top-right-radius: 12px; }
+
+/* Remove bottom border on the last row */
+.ticketTable tbody tr:last-child td {
+    border-bottom: none;
+}
+.ticketTable td {
+    border-bottom: 1px solid #e2e8f0;
+    color: #4a5568;
+    font-size: 0.95rem;
+}
+
+/* --- Status Badges --- */
+.statusBadge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 9999px; /* Pill shape */
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/* Badge Colors based on TICKET_STATUSES values: Open, In Progress, Closed */
+.Open {
+    background-color: #fee2e2; /* Red-100 */
+    color: #e53e3e; /* Red-600 */
+}
+
+.InProgress {
+    background-color: #fefcbf; /* Yellow-100 */
+    color: #d69e2e; /* Yellow-600 */
+}
+
+.Closed {
+    background-color: #c3dafe; /* Blue-100 */
+    color: #3182ce; /* Blue-600 */
+}
+
+/* --- Link and Action Buttons --- */
+.ticketTitleLink {
+    color: #0070f3;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.ticketTitleLink:hover {
+    color: #005bb5;
+    text-decoration: underline;
+}
+
+.actionButton {
+    padding: 6px 10px;
+    margin-right: 5px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    text-decoration: none; /* For the View Link */
+    display: inline-block;
+    text-align: center;
+}
+
+/* View Link Style */
+.actionButton:not(.deleteButton) {
+    background-color: #38bdf8; /* Light Blue */
+    color: white;
+    border: none;
+    transition: background-color 0.2s ease;
+}
+.actionButton:not(.deleteButton):hover {
+    background-color: #0ea5e9;
+}
+
+
+.deleteButton {
+    background-color: #f56565; /* Red */
+    color: white;
+    border: none;
+    transition: background-color 0.2s ease;
+}
+
+.deleteButton:hover {
+    background-color: #e53e3e;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filterButtons {
+        flex-wrap: wrap;
+        margin-bottom: 15px;
+        justify-content: center;
+    }
+
+    .createButton {
+        width: 100%;
+    }
+}
